@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>counter strike 1.6</title>
+        <style>
+            .body{
+                border: 20px sandybrown solid;
+            }
+            * {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+body {
+  background-image: url("cs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: black;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid rgb(255, 255, 255);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Counter Strike</h1>
+        <div class="body">
+            <h2>What is cs?
+            </h2>
+            <p>its a shooting game where there's terrorist and armies and your objective is to fight them and the winner will take the place</p>
+            <h2>Online gameplay</h2>
+            <p>in this game you will be able to play multiplayer and ply online with your friends and where you can chat and fight as a team and dueling between each team</p>
+            <h2>Lets go deeper</h2>
+            <p>
+                Counter-Strike (CS) is a series of multiplayer tactical first-person shooter video games in which teams of terrorists battle to perpetrate an act of terror (bombing, hostage-taking, assassination) while counter-terrorists try to prevent it (bomb defusal, hostage rescue, escort mission). The series began on Windows in 1999 with the release of the first game, Counter-Strike. It was initially released as a modification ("mod") for Half-Life that was designed by Minh "Gooseman" Le and Jess "Cliffe" Cliffe before the rights to the mod's intellectual property were acquired by Valve, the developers of Half-Life, who then turned Counter-Strike into a retail product released in 2000.
+
+                The original Counter-Strike was followed by Counter-Strike: Condition Zero, developed by Turtle Rock Studios and released in March 2004. A previous version of Condition Zero that was developed by Ritual Entertainment was released alongside it as Condition Zero: Deleted Scenes. Eight months later, Valve released Counter-Strike: Source, a remake of the original Counter-Strike and the first in the series to run on Valve's newly created Source engine.[4] The fourth game in the main series, Counter-Strike: Global Offensive, was released by Valve in 2012 for Windows, OS X, Xbox 360, and PlayStation 3. Hidden Path Entertainment, who worked on Counter-Strike: Source post-release, helped to develop the game alongside Valve.[5] A sequel, Counter-Strike 2, was announced in March 2023, with a tentative release date of Summer 2023.
+                
+                There have been several third-party spin-off titles created for Asian markets over the years. These include the Counter-Strike Online series, Counter-Strike Neo, and Counter-Strike Nexon: Studio.
+                
+                Gameplay
+                Counter-Strike is an objective-based, multiplayer tactical first-person shooter. Two opposing teams—the Terrorists and the Counter Terrorists—compete in game modes to complete objectives, such as securing a location to plant or defuse a bomb and rescuing or guarding hostages.[6][7] At the end of each round, players are rewarded based on their individual performance with in-game currency to spend on more powerful weapons in subsequent rounds. Winning rounds results in more money than losing and completing objectives such as killing enemy players gives cash bonuses.[6] Uncooperative actions, such as killing teammates, results in a penalty.[8]
+            </p>
+            <div class="timeline">
+                <div class="container left">
+                  <div class="content">
+                    <h2>2000</h2>
+                    <p>Counter-Strike.</p>
+                  </div>
+                </div>
+                <div class="container right">
+                  <div class="content">
+                    <h2>2001-2003</h2>
+                    <p>No changes</p>
+                  </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                      <h2>2004</h2>
+                      <p>Counter-Strike: Condition Zero<br>
+                        Counter-Strike: Source<br>
+                        Counter-Strike Neo</p>
+                    </div>
+
+                  </div>
+            </div>
+        </div>
+       
+    </body>
+</html>
